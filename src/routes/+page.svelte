@@ -27,7 +27,13 @@
 	</h1>
 
 
-	<button on:click={() => toggleAnswer()}>Show Answer</button>
+	<button on:click={() => toggleAnswer()}>
+		{#if showAnswer === true}
+			Hide Answer
+		{:else}
+			Show Answer
+		{/if}
+	</button>
 
 	{#if showAnswer === true}
 		<div class="counter">
