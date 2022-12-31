@@ -11,6 +11,7 @@ export const getTrivia = async (number = null, min = '0', max = '9999999') => {
 
 	const trivia = await response.json();
 	trivia.text = trivia.text.replace(trivia.number, 'What');
+	trivia.text = trivia.text.replace('(submit one to numbersapi at google mail!)', '');
 	// return the trivia question as a JSON object
 	return {
 		trivia
