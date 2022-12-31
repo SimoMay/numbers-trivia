@@ -2,7 +2,7 @@
 	import type { PageData } from './$types';
 	import { invalidateAll } from '$app/navigation';
 	export let data: PageData;
-	
+
 	let showAnswer = false;
 
 	const toggleAnswer = () => {
@@ -12,7 +12,7 @@
 	const newTrivia = () => {
 		showAnswer = false;
 		invalidateAll();
-	}
+	};
 </script>
 
 <svelte:head>
@@ -25,7 +25,6 @@
 	<h1>
 		{data.trivia.text}
 	</h1>
-
 
 	<button on:click={() => toggleAnswer()}>
 		{#if showAnswer === true}
@@ -47,8 +46,6 @@
 
 	<pre>Don't like it?</pre>
 	<a href="" on:click={() => newTrivia()}>Get another trivia</a>
-
-	
 </section>
 
 <style>
