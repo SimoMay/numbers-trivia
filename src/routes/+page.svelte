@@ -45,7 +45,7 @@
 	{/if}
 
 	<pre>Don't like it?</pre>
-	<a href="" on:click={() => newTrivia()}>Get another trivia</a>
+	<a href="" on:click={() => newTrivia()}>Get Another Trivia</a>
 </section>
 
 <style>
