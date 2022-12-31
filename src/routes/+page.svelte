@@ -4,14 +4,17 @@
 	export let data: PageData;
 
 	let showAnswer = false;
+	let loading = false;
 
 	const toggleAnswer = () => {
 		showAnswer = !showAnswer;
 	};
 
-	const newTrivia = () => {
+	const newTrivia = async () => {
+		loading = true;
 		showAnswer = false;
-		invalidateAll();
+		await invalidateAll();
+		loading = false;
 	};
 </script>
 
@@ -20,33 +23,40 @@
 	<meta name="description" content="Numbers Trivia" />
 </svelte:head>
 
-<section>
-	<pre>Question:</pre>
-	<h1>
-		{data.trivia.text}
-	</h1>
+{#if loading === true}
+	<section>
+		<pre>Loading...</pre>
+	</section>
+{:else}
+	<section>
+		<pre>Question:</pre>
+		<h1>
+			{data.trivia.text}
+		</h1>
 
-	<button on:click={() => toggleAnswer()}>
+		<button on:click={() => toggleAnswer()}>
+			{#if showAnswer === true}
+				Hide Answer
+			{:else}
+				Show Answer
+			{/if}
+		</button>
+
 		{#if showAnswer === true}
-			Hide Answer
-		{:else}
-			Show Answer
-		{/if}
-	</button>
-
-	{#if showAnswer === true}
-		<div class="counter">
-			<div class="counter-viewport">
-				<div class="counter-digits">
-					<strong>{data.trivia.number}</strong>
+			<div class="counter">
+				<div class="counter-viewport">
+					<div class="counter-digits">
+						<strong>{data.trivia.number}</strong>
+					</div>
 				</div>
 			</div>
-		</div>
-	{/if}
+		{/if}
 
-	<pre>Don't like it?</pre>
-	<a href="" on:click={() => newTrivia()}>Get Another Trivia</a>
-</section>
+		<pre>Don't like it?</pre>
+		<a href="" on:click={() => newTrivia()}>Get Another Trivia</a>
+	</section>
+{/if}
+
 
 <style>
 	section {
