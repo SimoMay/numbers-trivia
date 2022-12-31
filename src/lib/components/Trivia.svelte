@@ -40,7 +40,7 @@
 			<div class="counter">
 				<div class="counter-viewport">
 					<div class="counter-digits">
-						<strong>{trivia.number}</strong>
+						<strong>{trivia.number.toLocaleString('en-US')}</strong>
 					</div>
 				</div>
 			</div>

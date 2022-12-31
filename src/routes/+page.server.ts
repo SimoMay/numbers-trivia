@@ -7,7 +7,7 @@ export const load: PageServerLoad = async (event) => {
 	const { url, params } = event;
 	const { number } = params;
 	const min = url.searchParams.get('min') || '0';
-	const max = url.searchParams.get('max') || '9999999';
+	const max = url.searchParams.get('max') || '100000000000000';
     
 	return await getTrivia(number, min, max);
 };

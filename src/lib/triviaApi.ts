@@ -1,5 +1,5 @@
 
-export const getTrivia = async (number = null, min = '0', max = '9999999') => {
+export const getTrivia = async (number = null, min = '0', max = '100000000000000') => {
 
 	if (number && isNaN(number)) {
 		number = null
