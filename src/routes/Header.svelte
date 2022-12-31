@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import github from '$lib/images/github.svg';
 </script>
 
 <header>
@@ -22,7 +23,11 @@
 		</svg>
 	</nav>
 
-	<div class="corner" />
+	<div class="corner">
+		<a href="https://github.com/SimoMay/numbers-trivia" target="_blank" rel="noreferrer">
+			<img src={github} alt="GitHub" />
+		</a>
+	</div>
 </header>
 
 <style>
@@ -34,6 +39,19 @@
 	.corner {
 		width: 3em;
 		height: 3em;
+	}
+
+	.corner a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+	}
+	.corner img {
+		width: 2em;
+		height: 2em;
+		object-fit: contain;
 	}
 
 	nav {
