@@ -13,7 +13,20 @@ export const getTrivia = async (number = null, min = '0', max = env.PUBLIC_MAX_T
 
 	const trivia = await response.json();
 	trivia.text = trivia.text.replace(trivia.number, 'What');
-	trivia.text = trivia.text.replace('(submit one to numbersapi at google mail!)', '');
+
+	// remove the answers from the trivia question, TODO: might need to add "flag" trivia questions
+	const leakedAnswers = [
+		'(108 divided by 4)',
+		", giving the name to Ray Bradbury's novel Fahrenheit 451",
+		'(78 AM gongs and 78 PM gongs)',
+		' 149 times',
+		'(22 regular letters and 5 final consonants)',
+		'(submit one to numbersapi at google mail!)'
+	];
+	leakedAnswers.forEach((answer) => {
+		trivia.text = trivia.text.replace(answer, '');
+	});
+
 	// return the trivia question as a JSON object
 	return {
 		trivia
