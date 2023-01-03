@@ -1,4 +1,6 @@
-export const getTrivia = async (number = null, min = '0', max = '100000000000000') => {
+import { env } from '$env/dynamic/public';
+
+export const getTrivia = async (number = null, min = '0', max = env.PUBLIC_MAX_TRIVIA_NUMBER) => {
 	if (number && isNaN(number)) {
 		number = null;
 	}
