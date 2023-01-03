@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { invalidateAll } from '$app/navigation';
 
-    export let trivia: { text: string; number: number; };
+	export let trivia: { text: string; number: number };
 	let showAnswer = false;
 	let loading = false;
 
@@ -50,7 +50,6 @@
 		<a href="" on:click={() => newTrivia()}>Get Another Trivia</a>
 	</section>
 {/if}
-
 
 <style>
 	section {
