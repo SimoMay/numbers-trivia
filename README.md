@@ -4,6 +4,8 @@ Unlimited trivia questions with numbers for answers, built with [`SvelteKit`](ht
 
 Demo: https://numbers-trivia.vercel.app/
 
+![Screenshot](/screenshot.png "Screenshot")
+
 ## Developing
 
 Once you've installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
