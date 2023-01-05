@@ -1,6 +1,6 @@
 # Numbers Trivia
 
-Unlimited trivia questions with numbers for answers, built with [`SvelteKit`](https://github.com/sveltejs/kit/), using [`Numbers API`](http://numbersapi.com/) for the trivia data.
+Numbers Trivia is a website that gives users new trivia questions with numerical answers only, built with [`SvelteKit`](https://github.com/sveltejs/kit/), using [`Numbers API`](http://numbersapi.com/) for the trivia data.
 
 Demo: https://numbers-trivia.vercel.app/
 

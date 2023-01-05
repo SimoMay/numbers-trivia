@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<title>Numbers Trivia</title>
-	<meta name="description" content="Numbers Trivia" />
+	<meta name="description" content="Get Your Daily Dose of Trivia with Our Numerical Questions" />
 </svelte:head>
 
 <Trivia trivia={data.trivia} />

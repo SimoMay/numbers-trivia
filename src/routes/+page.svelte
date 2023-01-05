@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>Numbers Trivia</title>
-	<meta name="description" content="Unlimited Trivia Quesions with Numbers for Answers" />
+	<meta name="description" content="Get Your Daily Dose of Trivia with Our Numerical Questions" />
 </svelte:head>
 
 <Trivia trivia={data.trivia} />
