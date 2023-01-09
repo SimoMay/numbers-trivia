@@ -1,6 +1,6 @@
 # Numbers Trivia
 
-Website that gives users new trivia questions with numerical answers only, built with [`SvelteKit`](https://github.com/sveltejs/kit/), using [`Numbers API`](http://numbersapi.com/) for the trivia data.
+A [`Wits and Wagers`](https://boardgamegeek.com/boardgame/20100/wits-wagers) helper website that gives users new trivia questions with numerical answers only to extended the boardgame, built with [`SvelteKit`](https://github.com/sveltejs/kit/), using [`Numbers API`](http://numbersapi.com/) for the trivia data.
 
 Demo: https://numbers-trivia.vercel.app/
 
